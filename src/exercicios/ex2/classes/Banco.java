@@ -24,7 +24,7 @@ public class Banco {
     }
 
     public double calcularMinimo() {
-        double minimo = banco.get(0).getSaldo();
+        double minimo = calcularMaximo();
         for (ContaBancaria conta : banco.values()) {
             if (conta.getSaldo() < minimo) {
                 minimo = conta.getSaldo();
@@ -34,7 +34,7 @@ public class Banco {
     }
 
     public double calcularMaximo() {
-        double maximo = banco.get(0).getSaldo();
+        double maximo = 0;
         for (ContaBancaria conta : banco.values()) {
             if (conta.getSaldo() > maximo) {
                 maximo = conta.getSaldo();
