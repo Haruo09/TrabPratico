@@ -1,22 +1,26 @@
 package exercicios.ex2.classes;
 
 public class ContaBancaria {
-    private int id;
+    private final int ID;
     private String titular;
     private double saldo;
     private double limite;
 
-    public ContaBancaria(double saldo, double limite) {
-        this.saldo = Math.abs(saldo);
-        this.limite = Math.abs(limite);
+    public ContaBancaria(int ID, String titular, double saldo, double limite) {
+        this.ID = ID;
+        this.titular = titular;
+        this.saldo = saldo;
+        this.limite = limite;
     }
 
     public String toString() {
         return String.format(
             """
+            ID: %d
+            Titular: %s
             Saldo: R$%,.2f
             Limite: R$%,.2f
-            """, saldo, limite
+            """, ID, titular, saldo, limite
         );
     }
 
@@ -38,8 +42,8 @@ public class ContaBancaria {
         saldo -= valorSaque;
     }
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
     public double getSaldo() {
