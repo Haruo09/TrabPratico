@@ -55,6 +55,7 @@ public class Banco {
     }
 
     public double calcularMedia() {
+        if (banco.size() == 0) return 0.;  // Atualização de segurança.
         double media = 0;  // Criando a variável "média", que será somada com o saldo de cada conta cadastrada.
         for (ContaBancaria conta : banco.values()) {  // Percorrendo as contas;
             media += conta.getSaldo();  // Somando a variável "média";
@@ -65,6 +66,8 @@ public class Banco {
     }
 
     public double calcularMinimo() {
+        if (banco.size() == 0) return 0.;  // Atualização de segurança;
+
         /*
         Criando a variável "mínimo", cujo valor inicial será a primeira conta da lista,
         valor o qual será comparado com as demais:
@@ -79,6 +82,8 @@ public class Banco {
     }
 
     public double calcularMaximo() {
+        if (banco.size() == 0) return 0.;  // Atualização de segurança;
+
         /*
         Criando a variável "maximo", cujo valor inicial será a primeira conta da lista,
         valor o qual será comparado com as demais:
