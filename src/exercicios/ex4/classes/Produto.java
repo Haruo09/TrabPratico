@@ -1,13 +1,13 @@
 package exercicios.ex4.classes;
 
 public class Produto {
-    private int id;
+    private final int ID;
     private String nome;
     private double preco;
     private int quantidade;
 
-    public Produto(int id, String nome, double preco, int quantidade) {
-        this.id = id;
+    public Produto(int ID, String nome, double preco, int quantidade) {
+        this.ID = ID;
         this.nome = nome;
         this.preco = preco;
         this.quantidade = Math.abs(quantidade);
@@ -16,15 +16,16 @@ public class Produto {
     public String toString() {
         return String.format(
             """
+            ID: %d
             Nome: %s
-            Preço: %,.2f
+            Preço: R$%,.2f
             Quantidade: %d
-            """, nome, preco, quantidade
+            """, ID, nome, preco, quantidade
         );
     }
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
     public String getNome() {
