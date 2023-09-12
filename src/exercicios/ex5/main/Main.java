@@ -2,11 +2,6 @@ package exercicios.ex5.main;
 
 import exercicios.ex5.classes.Matriz;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         // Instanciando a matriz:
