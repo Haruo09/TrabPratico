@@ -131,4 +131,12 @@ public class Estoque {
         return estoque.get(ID);
         // "else" desnecessário, já que o método para assim que encontra um return.
     }
+
+    public HashMap<Integer, Produto> getEstoque() {
+        return estoque;
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
 }
